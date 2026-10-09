@@ -1,18 +1,18 @@
 # bot.py — Telegram DDoS C2 with full inline keyboard
-# Python 3.11+ | python-telegram-bot>=21.0 | aiohttp>=3.9 | uvloop
-# Deps: pip install python-telegram-bot aiohttp uvloop
-# *Watch: ptb v21 changed callback_data limit to 64 bytes — keep method IDs short*
+# Python 3.10+ | python-telegram-bot>=21.0,<22.0 | aiohttp>=3.9
+# Deps: pip install python-telegram-bot aiohttp
+# *Watch: ptb v21 callback_data limit 64 bytes — keep job IDs short*
 
 import asyncio
 import logging
 import random
+import socket
 import time
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional
 
 import aiohttp
-import uvloop
 from telegram import (
     Update, InlineKeyboardButton, InlineKeyboardMarkup, BotCommand
 )
@@ -335,7 +335,6 @@ async def on_callback(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         return
 
     if data.startswith("m:"):
-        # quick-method select for latest draft
         if uid not in DRAFT:
             await q.edit_message_text("no draft — start over", reply_markup=MAIN_MENU)
             return
@@ -431,7 +430,6 @@ async def post_init(app: Application):
     ])
 
 def main():
-    uvloop.install()
     app = (
         Application.builder()
         .token(BOT_TOKEN)
@@ -449,5 +447,4 @@ def main():
     app.run_polling(drop_pending_updates=True)
 
 if __name__ == "__main__":
-    import socket  # needed by _udp_worker at runtime
     main()
