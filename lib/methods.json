@@ -1,0 +1,20 @@
+[
+    {"name": "FLOOD", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "TLS", "description": "layer 7 Attack  Url [normal]", "duration": "84000"},
+    {"name": "STRIKE", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "BYPASS", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "DESTROY", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "STORM", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "CIBI", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "THUNDER", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "QUANTUM", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "PIDORAS", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "UDP", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "HTTPS", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "HTTP-X", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "HTTP-RAW", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "BROWSER", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "GLORY", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "NINJA", "description": "layer 7 Attack Url [normal]", "duration": "84000"},
+    {"name": "XYN", "description": "layer 7 Attack Url [normal]", "duration": "84000"}
+]
